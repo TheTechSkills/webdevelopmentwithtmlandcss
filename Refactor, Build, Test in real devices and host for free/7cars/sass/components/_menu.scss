@@ -1,0 +1,141 @@
+.main-navigation {
+    &__checkbox {
+        display: none;
+    }
+
+    &__icon-box {
+        position: fixed;
+        top: 3rem;
+        right: 7rem;
+        background-color: $color-white;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        z-index: 600;
+        @include responsiveness(pixelToEm(900)) {
+            right: 5rem;
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    &__icon {
+        margin-top: 2.3rem;
+        margin-left: 1rem;
+        position: relative;
+        @include responsiveness(pixelToEm(900)) {
+            margin-top: 2.7rem;
+            margin-left: 1.5rem;
+        }
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 3rem;
+            height: 0.2rem;
+            background-color: $color-green;
+            border-radius: $border-radius-small;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.3s;
+        }
+
+        &::before {
+            top: -0.7rem;
+        }
+
+        &::after {
+            top: 0.7rem;
+        }
+    }
+
+    &__checkbox:checked + &__icon-box &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__icon-box &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__icon-box &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
+
+.nav {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 400;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+
+    &__bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        @include backgroundCar();
+        z-index: 300;
+        opacity: 0;
+        transition: all 0.3s;
+        visibility: hidden;
+    }
+
+    &__list {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        width: inherit;
+
+        &--item {
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.2rem;
+
+            &:not(:last-child) {
+                margin-bottom: 1.4rem;
+            }
+        }
+
+        &--link {
+            &:link,
+            &:visited {
+                display: inline-block;
+                color: $color-white;
+                padding: 1rem 3rem;
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                background-image: linear-gradient(130deg, $color-red 40%, $color-blue 88%);
+                transform: skew(-6deg) scale(1.2);
+            }
+        }
+    }
+}
+
+.main-navigation {
+    &__checkbox {
+        &:checked ~ .nav__bg {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &:checked ~ .nav {
+            width: 100%;
+        }
+    }
+}

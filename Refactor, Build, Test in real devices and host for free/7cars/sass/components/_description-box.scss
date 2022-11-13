@@ -1,0 +1,122 @@
+.description-box {
+    width: 24%;
+    padding: 1.4rem;
+    opacity: 0.9;
+    background-color: $color-white;
+    margin-left: 3%;
+    transition: all 0.3s;
+
+    @include responsiveness(pixelToEm(1200)) {
+        width: 27%;
+    }
+
+    @include responsiveness(pixelToEm(900)) {
+        width: 40%;
+    }
+
+    @include responsiveness(pixelToEm(600)) {
+        width: 50%;
+    }
+
+    @include responsiveness(pixelToEm(400)) {
+        width: 70%;
+    }
+
+    &__heading-main {
+        line-height: normal;
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: 0.32rem;
+        padding-bottom: 0.48rem;
+        text-transform: uppercase;
+
+        @include responsiveness(pixelToEm(400)) {
+            font-size: 3.8rem;
+        }
+    }
+
+    &__heading-sec {
+        font-weight: 400;
+        font-size: 1.12rem;
+        letter-spacing: 0.16rem;
+        line-height: 1.92rem;
+        text-transform: uppercase;
+        padding-bottom: 0.8rem;
+        text-align: justify;
+        @include responsiveness(pixelToEm(400)) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__button {
+        text-transform: uppercase;
+        background-color: $color-light-blue;
+        display: inline-block;
+        padding: 0.8rem 1.12rem;
+        font-weight: 700;
+        letter-spacing: 0.16rem;
+        transition: all 0.3s;
+
+        &--icon {
+            color: $color-white;
+            font-size: 2.24rem;
+        }
+
+        &--link {
+            color: $color-white;
+            font-size: 1.12rem;
+            padding-left: 0.48rem;
+            display: inline-block;
+            transform: translateY(-3px);
+            @include responsiveness(pixelToEm(400)) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &:hover {
+            background: $color-dark-green;
+        }
+    }
+
+    .outerlink-container {
+        text-transform: uppercase;
+        padding: 1.52rem 0;
+        font-size: 0.96rem;
+        @include responsiveness(pixelToEm(400)) {
+            font-size: 2.8rem 0;
+        }
+
+        &__link {
+            color: $color-gray;
+            font-weight: 700;
+            letter-spacing: 0.32rem;
+            transition: all 0.3s;
+            @include responsiveness(pixelToEm(400)) {
+                letter-spacing: 0.6rem;
+            }
+            &:hover {
+                color: $color-light-blue;
+            }
+        }
+    }
+
+    &__footer--group {
+        padding: 0.64rem 0;
+        .footer--group-item {
+            display: block;
+
+            &:nth-of-type(1) {
+                font-size: 1.12rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 0.16rem;
+            }
+
+            &:nth-of-type(2) {
+                font-size: 0.96rem;
+                margin-top: 0.16rem;
+                letter-spacing: 0.128rem;
+            }
+        }
+    }
+}

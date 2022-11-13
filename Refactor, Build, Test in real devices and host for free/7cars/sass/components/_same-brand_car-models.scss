@@ -1,0 +1,95 @@
+.models {
+    &__list {
+        &--item {
+            display: inline-block;
+            font-size: 2.4rem;
+            padding: $default-font-size;
+            @include responsiveness(pixelToEm(650)) {
+                font-size: 3.42rem;
+            }
+        }
+
+        &--link:link,
+        &--link:visited,
+        &--link:active {
+            color: $color-gray;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+            @include twoColorGradientAngleText($color-green, $color-green, $color-blue);
+        }
+
+        &--link:hover {
+            color: $color-light-blue;
+            border-bottom: 2px solid $color-light-blue;
+        }
+    }
+    &__cars {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding: 2.75rem 2.25rem;
+        @include responsiveness(pixelToEm(800)) {
+            grid-template-columns: 50% 50%;
+        }
+
+        @include responsiveness(pixelToEm(650)) {
+            grid-template-columns: 100%;
+        }
+
+        &--car {
+            padding: 1.6rem 2.4rem;
+            border-right: 1px solid $color-green;
+
+            &:last-of-type {
+                border-right: none;
+            }
+            @include responsiveness(pixelToEm(800)) {
+                border: none;
+            }
+
+            @include responsiveness(pixelToEm(650)) {
+                &:not(:first-child) {
+                    margin-top: 5rem;
+                }
+            }
+
+            .car-model {
+                &--name {
+                    font-size: 2.4rem;
+                    @include responsiveness(pixelToEm(650)) {
+                        font-size: 3.42rem;
+                    }
+                }
+                &--title {
+                    font-size: $default-font-size;
+                    text-transform: uppercase;
+                    @include responsiveness(pixelToEm(650)) {
+                        font-size: 2.3rem;
+                    }
+                }
+                &--body {
+                    font-size: 1.2rem;
+                    letter-spacing: 0.16rem;
+                    @include responsiveness(pixelToEm(650)) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        &--image {
+            .car-image {
+                width: 100%;
+            }
+        }
+
+        &--btn {
+            color: $color-gray;
+            padding: 0.8rem;
+            border: 1px solid $color-gray;
+            font-size: $default-font-size;
+            @include responsiveness(pixelToEm(650)) {
+                font-size: 2.3rem;
+            }
+        }
+    }
+}

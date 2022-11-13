@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include responsiveness(pixelToEm(1200)) {
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include responsiveness(pixelToEm(900)) {
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include responsiveness(pixelToEm(600)) {
+        font-size: 43.75%; // 1rem = 7px, 7/16 = 43.75%
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $color-green;
+    color: $color-white;
+}

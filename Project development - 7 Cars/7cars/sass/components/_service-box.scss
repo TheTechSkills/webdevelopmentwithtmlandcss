@@ -1,0 +1,38 @@
+.services-boxes{
+    .row{
+        padding: 0 8rem;
+    }
+}
+.service-box{
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    color: $color-blue;
+    text-align: center;
+    background-color: $color-white;
+    border-radius: $border-radius-small;
+    box-shadow: 0 1.5rem 3.8rem rgba($color-black, .15);
+    transition: all .3s;
+    cursor: pointer;
+
+    &--icon{
+        font-size: 6rem;
+        display: inline-block;
+        padding: 2.8rem 0 1.2rem 0;
+        margin-bottom: .5rem;
+    }
+
+    &--title{
+        text-transform: uppercase;
+        font-size: $default-font-size;
+        font-weight: 700;
+    }
+
+    &--description{
+        text-align: justify;
+    }
+
+    &:hover{
+        transform: translateY(-1.7rem) scale(1.06);
+        box-shadow: 0 2rem 3.8rem rgba($color-black, .15);
+    }
+}

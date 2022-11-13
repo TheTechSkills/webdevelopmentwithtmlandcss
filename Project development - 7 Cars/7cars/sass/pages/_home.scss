@@ -1,0 +1,66 @@
+.section__slide, 
+.section__racing-nature{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.section__in-demand{
+    padding: 0 0 4rem 0;
+}
+
+.section__models{
+    padding: 4rem 0;
+}
+
+.section__racing-nature{
+    padding: 4rem 0 6rem 0;
+    .slides{
+        &__slide{
+            &--text{
+                p{
+                    @include twoColorGradientText($color-racing-pink, $color-racing-yellow);
+                }
+                &-icons{
+                    top: 85%;
+                    span{
+                    @include twoColorGradientText($color-racing-pink, $color-racing-yellow);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section__services{
+    &--content{
+        padding: 15rem 0;
+        @include backgroundCar();
+    }
+}
+
+.section__find-us{
+    padding: 5rem 0;
+
+    &--next{
+        width: 80%;
+        margin: auto;
+    }
+
+    .find-us__map{
+        height: 85vh;
+        background-image: url(../../img/home/map/map.png);
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 .5rem 3rem rgba($color-black, .5);
+    }
+}
+
+.section__contact{
+    padding: 7rem 0;
+}
+
+.section__testimonials{
+    padding: 5rem 0;
+}

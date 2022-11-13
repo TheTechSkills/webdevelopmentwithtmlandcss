@@ -1,0 +1,13 @@
+.header{
+    height: 90vh;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+
+    &__text-box{
+        position: absolute;
+        top: 38%;
+        left: 10%;
+        transform: translate(-10%, -38%);
+    }
+}

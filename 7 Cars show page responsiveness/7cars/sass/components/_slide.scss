@@ -1,0 +1,108 @@
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+
+    .radio{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    &__slide{
+        width: 20%;
+        overflow: hidden;
+        position: relative;
+        transition: .6s;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &--text{
+            position: absolute;
+            top: 5%;
+            left: 3%;
+            padding: 0 1rem;
+            background-color: $color-white;
+
+            p{
+                font-size: 5rem;
+                font-weight: 900;
+                @include twoColorGradientText($color-green, $color-blue);
+                @include responsiveness(pixelToEm(750)){
+                    font-size: 4rem;
+                }
+
+                @include responsiveness(pixelToEm(450)){
+                    font-size: 3.5rem;
+                }
+            
+            }
+
+
+            &-icons{
+                position: absolute;
+                top: 18%;
+                left: 3%;
+                background-color: $color-white;
+                padding: 0 1rem;
+                @include responsiveness(pixelToEm(750)){
+                    top: 16%;
+                }
+
+                @include responsiveness(pixelToEm(700)){
+                    top: 85%;
+                }
+    
+                span{
+                    font-size: 2rem;
+                    margin-right: 1.3rem;
+                    @include twoColorGradientText($color-green, $color-blue);
+                }
+            }
+        }
+    }
+}
+
+.navigation{
+    position: absolute;
+    bottom: 60%;
+    right: 2%;
+    display: flex;
+    writing-mode: vertical-rl;
+
+    .bar{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid $color-larchmere;
+        margin: 5px;
+        cursor: pointer;
+        transition: .4s;
+        background-color: aquamarine;
+        &:hover{
+            background: $color-observatory;
+        }
+    }
+}
+
+#r1:checked~ .s1,
+#racing-nature-1:checked~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1,
+#racing-nature-2:checked~ .s1{
+    margin-left: -20%;
+}
+
+#r3:checked ~ .s1,
+#racing-nature-3:checked~ .s1{
+    margin-left: -40%;
+}
+
+#racing-nature-4:checked~ .s1{
+    margin-left: -60%;
+}

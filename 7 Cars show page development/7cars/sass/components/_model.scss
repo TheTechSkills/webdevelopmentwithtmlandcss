@@ -1,0 +1,109 @@
+.models{
+    width: 100%;
+    overflow: hidden;
+
+    .model{
+        @include clearfix;
+        float: left;
+        width: 33.3333%;
+        height: 30rem;
+        position: relative;
+
+        @include responsiveness(pixelToEm(1020)){
+            width: 50%;
+        }
+
+        @include responsiveness(pixelToEm(720)){
+            width: 100%;
+        }
+
+        &__img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: $color-black;
+            
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: scale(1.3);
+                opacity: .8;
+                transition: all .2s;
+
+                &:hover{
+                    transform:scale(1);
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__info{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 1rem;
+            color: $color-white;
+            .model{
+                &-name{
+                    font-size: 3.8rem;
+                    font-weight: 700;
+                }
+
+                &-price{
+                    font-size: 2.1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__footer{
+            position: absolute;
+            bottom: 10%;
+            left: 4%;
+            .btn__model{
+                &:link,
+                &:visited{
+                    text-decoration: none;
+                    font-size: $default-font-size;
+                    letter-spacing: 1.4px;
+                    transition: all .2s;
+                }
+
+                &:active,
+                &:focus{
+                    transform: translateY(-1px);
+                    box-shadow: 0 .5rem 1rem rgba($color-dark-green, .9);
+                }
+                i{
+                    margin-right: 8px;
+                }
+
+                &--custom{
+                    color: $color-dark-green;
+                    background-color: $color-white;
+                    padding: 1.6rem 2.72rem;
+                    margin-right: 5px;
+                    &:hover{
+                        color: $color-white;
+                        background-color: $color-dark-green;
+                    }
+                }
+
+                &--white{
+                    padding: 1.6rem 2.72rem;
+                    color: $color-white;
+                    background: transparent;
+                    border: 1px solid $color-white;
+                    &:hover{
+                        color: $color-dark-green;
+                        border-color: $color-dark-green;
+                    }
+                }
+
+            }
+        }
+    }
+}

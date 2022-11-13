@@ -1,0 +1,25 @@
+.contact-wrapper{
+    width: 85%;
+    margin: auto;
+}
+.contact{
+    position: relative;
+
+    &__form{
+        width: 50%;
+        height: 100%;
+        background-color: rgba($color-green, .8);
+        padding: 2rem 4rem 4rem 4rem;
+        @include responsiveness(pixelToEm(900)){
+            width: 70%;
+        }
+        @include responsiveness(pixelToEm(600)){
+            width: 100%;
+        }
+    
+    }
+
+    h2{
+        color: $color-white;
+    }
+}

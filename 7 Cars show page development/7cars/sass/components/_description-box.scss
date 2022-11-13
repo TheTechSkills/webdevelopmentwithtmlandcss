@@ -1,0 +1,104 @@
+.description-box{
+    width: 100%;
+    padding: 1.4rem;
+    opacity: .9;
+    background-color: $color-white;
+
+    &__heading-main{
+        line-height: normal;
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: .32rem;
+        padding-bottom: .48rem;
+        text-transform: uppercase;
+    }
+
+    &__heading-sec{
+        font-weight: 400;
+        font-size: 1.12rem;
+        letter-spacing: .16rem;
+        line-height: 1.92rem;
+        text-transform: uppercase;
+        padding-bottom: .8rem;
+        text-align: justify;
+    }
+
+    &__button{
+        text-transform: uppercase;
+        background-color: $color-light-blue;
+        display: inline-block;
+        padding: .8rem 1.12rem;
+        font-weight: 700;
+        letter-spacing: .16rem;
+        transition: all .3s;
+
+        &--icon{
+            color: $color-white;
+            font-size: 2.24rem;
+        }
+
+        &--link{
+            color: $color-white;
+            font-size: 1.12rem;
+            padding-left: .48rem;
+            display: inline-block;
+            transform: translateY(-3px);
+        }
+
+        &:hover{
+            background: $color-dark-green;
+        }
+    }
+
+    .outerlink-container{
+        text-transform: uppercase;
+        padding: 1.52rem 0;
+        font-size: .96rem;
+
+        &__link{
+            color: $color-gray;
+            font-weight: 700;
+            letter-spacing: .32rem;
+            transition: all .3s;
+            &:hover{
+                color: $color-light-blue;
+            }
+        }
+    }
+
+    &__footer--group{
+        padding: .64rem 0;
+        .footer--group-item{
+            display: block;
+
+            &:nth-of-type(1){
+                font-size: 1.12rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: .16rem;
+            }
+
+            &:nth-of-type(2){
+                font-size: .96rem;
+                margin-top: .16rem;
+                letter-spacing: .128rem;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

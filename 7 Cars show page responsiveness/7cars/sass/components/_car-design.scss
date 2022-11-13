@@ -1,0 +1,37 @@
+.car-design{
+    height: 80vh;
+    width: 100%;
+
+    &__bg-container{
+        background: url(../../img/show/main/M235iInterior.jpg);
+        @include backgroundFixer();
+    }
+
+    &__content{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: .32rem;
+    }
+
+    &__nav{
+        &--btn{
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 1.44rem;
+            background-color: $color-light-blue;
+            color: $color-white;
+            padding: .96rem 2.08rem;
+            transition: all .3s;
+            border-radius: $border-radius-small;
+
+            &:not(:last-child){
+                margin-right: .64rem;
+            }
+
+            &:hover{
+                background-color: $color-dark-green;
+            }
+        }
+    }
+}

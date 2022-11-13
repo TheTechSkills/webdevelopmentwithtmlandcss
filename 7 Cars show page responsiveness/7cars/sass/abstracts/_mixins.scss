@@ -1,0 +1,53 @@
+@mixin twoColorGradientText($gradient-first-color, $gradient-second-color){
+    background: -webkit-linear-gradient($gradient-first-color, $gradient-second-color);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin twoColorGradientAngleText($bg-color, $gradient-first-color, $gradient-second-color){
+   background-color: $bg-color;
+   background-image: linear-gradient(315deg, $gradient-first-color 0%, $gradient-second-color 74%);
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+@mixin clearfix{
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin backgroundCar(){
+    background-image: linear-gradient(
+            to right bottom, 
+            rgba($color-green, .8),
+            rgba($color-blue, .8)
+        ), url(../../img/home/services/velar.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+
+@mixin backgroundFixer(){
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+@mixin cardBackground($first-color, $second-color){
+    background-image: linear-gradient(
+                    to right bottom , 
+                    rgba($first-color, .85),
+                    rgba($second-color, .85)
+                );
+}
+
+@mixin responsiveness($screen-width){
+    @media only screen and (max-width: $screen-width){
+        @content;
+    }
+}

@@ -1,0 +1,39 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-gray;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 5rem;
+    animation: moveToRightWithSkew 2s ease-in-out backwards;
+}
+
+.heading-secondary{
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    @include twoColorGradientText($color-green, $color-blue);
+    transition: all .2s;
+    animation: moveToRight .8s ease-in backwards;
+    @include responsiveness(pixelToEm(500)){
+        font-size: 3.3rem;
+    }
+    
+    &:hover{
+        transform: skewX(7deg);
+        text-shadow: .5rem 1rem 2rem rgba($color: $color-black, $alpha: .2);
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+a:link,
+a:visited{
+    text-decoration: none;
+}

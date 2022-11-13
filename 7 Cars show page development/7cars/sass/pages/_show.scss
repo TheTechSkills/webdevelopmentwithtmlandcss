@@ -1,0 +1,59 @@
+.header-show{
+    width: 100%;
+    height: 100vh;
+
+    &__background{
+        background: url(../../img/show/main/M235i.jpg);
+        @include backgroundFixer();
+        position: relative;
+    }
+}
+
+.description-box__container{
+    position: absolute;
+    top: 23%;
+    left: 3%;
+    width: 24%;
+}
+
+.after-header{
+    width: 100%;
+    height: 80vh;
+
+    &--bg-container{
+        background: url(../../img/show/main/M235iBlackBack.jpg);
+        background-attachment: fixed;
+        @include backgroundFixer()
+    }
+}
+
+.section__heading{
+    padding: 0 3rem;
+    &--body{
+        line-height: 2.56rem;
+        padding: 0 2rem;
+        font-size: 2.3rem;
+        font-weight: 300;
+        text-align: justify;
+    }
+}
+
+
+.section-car-design{
+    padding: 6rem 0;
+}
+
+.section--same-brand-models{
+    position: relative;
+    .test-drive{
+        position: absolute;
+        font-size: 4rem;
+        color: $color-light-blue;
+        bottom: 30%;
+        right: 7%;
+    }
+}
+
+.section-shopping{
+    padding: 1rem 3.2rem 10rem 3.2rem;
+}

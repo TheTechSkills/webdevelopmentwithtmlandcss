@@ -1,0 +1,27 @@
+.shopping-tools{
+    &__icon{
+        width: 100%;
+        font-size: 3.2rem;
+    }
+
+    &__link{
+        display: inline-block;
+        padding: 0 .8rem;
+        margin: 0 .9rem;
+        color: rgba($color-dark-green, .8);
+        padding-top: 1.9rem;
+        transition: all .3s;
+
+        span{
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        &:hover{
+            color: $color-blue;
+        }
+    }
+}

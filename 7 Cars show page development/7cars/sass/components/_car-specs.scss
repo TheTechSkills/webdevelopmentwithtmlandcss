@@ -1,0 +1,88 @@
+.engine-specs{
+    .specs{
+        padding: 3.2rem;
+        &__group{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 0 9.6rem;
+
+            &--left{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                padding: 6.4rem 0;
+
+                &--left,
+                &--right{
+                    h4,
+                    p{
+                        padding: 1rem;
+                    }
+
+                    h4{
+                        color: $color-soft-dark-gray;
+                        font-size: 2.08rem;
+                    }
+
+                    p{
+                        font-size: 1.6rem;
+                    }
+
+                    .spec-value{
+                        margin-left: .48rem;
+                    }
+                }
+
+            }
+
+            &--right{
+                padding: 3.68rem;
+                font-size: $default-font-size;
+                background: $color-light-gray;
+                opacity: .9;
+                transition: all .3s;
+
+                &:hover{
+                    background: rgb(254, 253,253);
+                    box-shadow: 0 .4rem 1rem rgba($color-black, .18);
+                    cursor: pointer;
+                    opacity: 1;
+                }
+                .engine{
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+
+                    &--left{
+                        h3{
+                            font-size: 2.8rem;
+                            padding: .48rem;
+                        }
+                    }
+
+                    p{
+                        padding: .48rem;
+                    }
+
+                    .engine-spec-title{
+                        display: inline-block;
+                        padding: .64rem 0;
+                    }
+
+                    .engine-spec-value{
+                        color: $color-soft-dark-gray;
+                    }
+
+                    i{
+                        font-size: 1.76rem;
+                        margin-left: .48rem;
+                    }
+
+                    &--right{
+                        background: $color-soft-green;
+                        color: $color-white;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
